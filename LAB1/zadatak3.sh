@@ -20,7 +20,7 @@ LogAnalyzer()
       echo "datum: $date"
       for _ in {1..50}; do echo -n "-"; done
       echo
-      grep -oE '"(.*)"' "$file" | tr -d '"' | sort | uniq -c | sort -nr
+      grep -oE '"(.*)"' "$file" | tr -d '"' | sort | uniq -c | sort -nr | sed -E "s/^( *[0-9]*)( )(.*)$/\1 : \3/"
       echo
   done
 }

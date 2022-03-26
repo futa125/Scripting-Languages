@@ -32,7 +32,7 @@ ImageSorter()
 
       for _ in {1..3}; do echo -n "-"; done
       echo -n " Ukupno: $i slika "
-      for _ in {1..3}; do echo -n "-"; done
+      for _ in {1..4}; do echo -n "-"; done
       echo
   done
 }
