@@ -13,7 +13,7 @@ Help()
 
 DictionaryAnalyzer()
 {
-  cut -c1 "$dict_file" | tr "[:upper:]" "[:lower:]" | sort | uniq -ci | sort -nr
+  cut -c1 "$dict_file" | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -nr
 }
 
 if [ "$dict_file" != "" ]; then
