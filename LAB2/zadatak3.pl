@@ -25,7 +25,7 @@ my %access_times;
 
 while (my $line = <>) {
     chomp $line;
-    $line =~ /^.*\[(\d{2})\/(\w{3})\/(\d{4}):(\d{2}):\d{2}:\d{2} \+\d{4}\].*$/g;
+    $line =~ /^.*\[(\d{2})\/(\w{3})\/(\d{4}):(\d{2}):\d{2}:\d{2} \+\d{4}\].*$/;
 
     my $current_date = sprintf("%d-%02d-%d", $3, $months{$2}, $1);
 
