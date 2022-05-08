@@ -12,7 +12,7 @@ sub print_file_details {
     print "-------------------------------\n";
 
     foreach my $key (sort keys %access_times) {
-        print "$key: $access_times{$key}\n";
+        print " $key : $access_times{$key}\n";
     }
 
     print "\n";

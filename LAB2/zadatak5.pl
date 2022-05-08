@@ -35,13 +35,18 @@ while (<>) {
     }
 }
 
-my $max = 0;
+my $max_number_length = 0;
+for (1..keys %students) {
+    $max_number_length = length($_) if length($_) > $max_number_length;
+}
+
+my $max_name_length = 0;
 for (keys %students) {
-    $max = length($_) if length($_) > $max;
+    $max_name_length = length($_) if length($_) > $max_name_length;
 }
 
 my $i;
 foreach my $student (reverse sort {$students{$a} <=> $students{$b}} keys %students) {
     $i += 1;
-    printf "%d. %-*s  : %.2f\n", $i, $max, $student, $students{$student};
+    printf "%*d. %-*s  : %.2f\n", $max_number_length, $i, $max_name_length, $student, $students{$student};
 }
